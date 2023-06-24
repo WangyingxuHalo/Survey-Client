@@ -1,8 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { postAnswer } from '@/services/answer';
+import { nanoid } from 'nanoid';
 
 function genAnswerInfo(reqBody: any) {
+    // generate identifier for each survey filler
+    const identifier = nanoid(10);
     const answerList: any[] = [];
     Object.keys(reqBody).forEach((key) => {
         if (key === "questionId") {
@@ -16,6 +19,7 @@ function genAnswerInfo(reqBody: any) {
     return {
         questionId: reqBody.questionId,
         answerList,
+        identifier
     }
 }
 

@@ -1,5 +1,3 @@
-import QuestionInput from '@/components/QuestionComponents/QuestionInput';
-import QuestionRadio from '@/components/QuestionComponents/QuestionRadio';
 import styles from "@/styles/question.module.scss";
 import PageWrapper from '@/components/PageWrapper';
 import { getQuestionById } from '@/services/question';
@@ -70,7 +68,6 @@ export default function Question(props: PropsType) {
 export async function getServerSideProps(context: any) {
     const { id = "" } = context.params;
     const data = await getQuestionById(id);
-
 
     return {
         props: {

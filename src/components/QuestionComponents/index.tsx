@@ -37,12 +37,4 @@ export const getComponent = (component: ComponentInfoType) => {
             return <QuestionCheckbox fe_id={fe_id} props={props} />;
         
     }
-
-    // if (type === "questionInput") {
-    //     return <QuestionInput fe_id={fe_id} props={props} />
-    // }
-    // if (type === "questionRadio") {
-    //     return <QuestionRadio fe_id={fe_id} props={props} />
-    // }
-    // if (type === )
 }

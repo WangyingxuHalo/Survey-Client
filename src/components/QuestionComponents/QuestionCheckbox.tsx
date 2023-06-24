@@ -46,7 +46,7 @@ const QuestionCheckbox: FC<PropsType> = ({ fe_id, props }) => {
 
                 return <li key={value} className={liClassName}>
                     <label>
-                        <input type="checkbox" checked={selectedValues.includes(value)} onChange={() => toggleChecked(value)} />
+                        <input type="checkbox" checked={selectedValues.includes(text)} onChange={() => toggleChecked(text)} />
                         {text}
                     </label>
                 </li>

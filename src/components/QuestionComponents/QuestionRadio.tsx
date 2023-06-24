@@ -27,7 +27,7 @@ const QuestionRadio: FC<PropsType> = ({ fe_id, props }) => {
 
                 return <li key={val} className={className}>
                     <label>
-                        <input type="radio" name={fe_id} value={val} defaultChecked={value === val} />
+                        <input type="radio" name={fe_id} value={text} defaultChecked={text === val} />
                         {text}
                     </label>
                 </li>
