@@ -1,4 +1,4 @@
-const HOST = "http://localhost:3001";
+const HOST = "https://mysurvey.wwwyxxx.uk";
 
 export async function get(url: string) {
     const res = await fetch(`${HOST}${url}`);

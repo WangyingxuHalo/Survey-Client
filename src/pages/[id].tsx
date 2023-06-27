@@ -55,7 +55,7 @@ export default function Question(props: PropsType) {
     </>
 
     return <PageWrapper title={title} desc={desc}>
-        <form method='POST' action="/api/answer">
+        <form method='POST' action="https://mysurvey.wwwyxxx.uk/question/api/answer">
             <input type='hidden' name='questionId' defaultValue={id} />
             {componentsElem}
             <div className={styles["submit-button-container"]}>

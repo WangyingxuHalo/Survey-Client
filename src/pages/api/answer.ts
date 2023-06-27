@@ -36,10 +36,10 @@ export default async function handler(
         const postRes = await postAnswer(answerList);
         if (postRes.errno === 0) {
             //成功
-            res.redirect("/success");
+            res.writeHead(302, { Location: 'https://mysurvey.wwwyxxx.uk/question/success' });
             res.end();
         } else {
-            res.redirect("/fail");
+            res.writeHead(302, { Location: 'https://mysurvey.wwwyxxx.uk/question/fail' });
             res.end();
         }
         
